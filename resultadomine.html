@@ -44,6 +44,14 @@
 
         .detail-row { margin-bottom: 8px; }
 
+        /* Contenedor para alinear los botones a la derecha */
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
         .btn-portal {
             display: flex;
             align-items: center;
@@ -53,9 +61,26 @@
             padding: 10px 20px;
             border-radius: 4px;
             text-decoration: none;
-            float: right;
             font-size: 16px;
+            transition: background-color 0.3s;
         }
+
+        /* Estilo para el nuevo botón de descarga */
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2b542c; /* Verde oscuro a juego con la alerta */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-portal:hover { background-color: #003366; }
+        .btn-download:hover { background-color: #1e3c1e; }
 
         .footer { margin-top: 100px; clear: both; color: #777; font-size: 13px; line-height: 1.4; }
         .footer strong { display: block; color: #555; }
@@ -89,10 +114,15 @@
             <div class="detail-row">Nombre: <strong>JAVIER IGNACIO VALDÉS TAPIA</strong></div>
             <div class="detail-row">RUN: <strong>17.816.927-0</strong></div>
             <div class="detail-row">Días desde la Emisión: <strong>5,767 dias</strong></div>
-            </div>
+        </div>
     </div>
 
-    <a href="#" class="btn-portal">🏠 Volver al Portal</a>
+    <!-- Contenedor con ambos botones -->
+    <div class="actions">
+        <!-- El atributo download obliga al navegador a descargar el archivo especificado en el href -->
+        <a href="JavierValdes.pdf" download="JavierValdes.pdf" class="btn-download">📥 Descargar Certificado</a>
+        <a href="#" class="btn-portal">🏠 Volver al Portal</a>
+    </div>
 
     <div class="footer">
         <strong>Ministerio de Educación</strong>
